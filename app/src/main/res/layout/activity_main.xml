@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/btnCalculate"
+    android:id="@+id/Main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/layout_background"
@@ -149,7 +149,7 @@
     </androidx.cardview.widget.CardView>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnCalculate"
         android:layout_width="285dp"
         android:layout_height="71dp"
         android:layout_marginBottom="50dp"
@@ -188,7 +188,6 @@
                 android:id="@+id/tvIndex"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="23.35"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="60sp"
@@ -198,11 +197,18 @@
                 android:id="@+id/tvResult"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="You are Healthy"
                 android:textAlignment="center"
                 android:textColor="@android:color/holo_green_dark"
                 android:textSize="40sp"
                 android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="@color/text_hint"
+                android:textSize="20sp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
