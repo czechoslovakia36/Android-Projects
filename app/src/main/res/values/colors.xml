@@ -12,4 +12,7 @@
     <color name="layout_background">#222830</color>
     <color name="card_backgroud">#28425C</color>
     <color name="text_hint">#767BBE</color>
+
+    <color name="button_background">#8C712F</color>
+
 </resources>
