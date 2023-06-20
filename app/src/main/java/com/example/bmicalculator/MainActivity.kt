@@ -20,6 +20,8 @@ class MainActivity : AppCompatActivity() {
 
         val calcButton = findViewById<Button>(R.id.btnCalculate)
 
+
+
         calcButton.setOnClickListener{
             val weight = weightText.text.toString()
             val height = heightText.text.toString()
@@ -49,7 +51,7 @@ class MainActivity : AppCompatActivity() {
                     return false
                 }
                 height.isNullOrBlank()->{
-                    Toast.makeText(this,"Weight is empty",Toast.LENGTH_LONG).show()
+                    Toast.makeText(this,"Height is empty",Toast.LENGTH_LONG).show()
                     return false
                 }
                 else -> {
@@ -59,11 +61,25 @@ class MainActivity : AppCompatActivity() {
             }
     }
 
+//    private fun clearResult(weight: String,height: String,resultIndex:String,resultDescript:String,info:String) {
+//        when{
+//            weight.isNullOrBlank() and height.isNullOrBlank()->{
+//                resultIndex.text= ""
+//                resultDescript.text=""
+//                info.text=""
+//
+//            }
+//        }
+//
+//    }
+
 
     private  fun displayResult(bmi:Float){
         val resultIndex = findViewById<TextView>(R.id.tvIndex)
         val resultDescription = findViewById<TextView>(R.id.tvResult)
         val info = findViewById<TextView>(R.id.tvInfo)
+
+
 
         resultIndex.text= bmi.toString()
 
