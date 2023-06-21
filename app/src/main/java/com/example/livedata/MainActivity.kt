@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 
 class MainActivity : AppCompatActivity() {
@@ -25,11 +26,17 @@ class MainActivity : AppCompatActivity() {
 
         val textView = findViewById<TextView>(R.id.count_text)
         val btn= findViewById<Button>(R.id.button)
-        textView.text= viewModel.getCurrentCount().toString()
+
+        viewModel.count.observe(this, Observer {
+            textView.text=it.toString()
+        })
+//        textView.text= viewModel.getCurrentCount().toString()
         btn.setOnClickListener{
 //            count++
 //            textView.text= count.toString()
-            textView.text= viewModel.getUpdatedCount().toString()
+//            textView.text= viewModel.getUpdatedCount().toString()
+
+            viewModel.getUpdatedCount()
         }
 
 

@@ -1,14 +1,19 @@
 package com.example.livedata
 
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class MainActivityViewModel:ViewModel() {
-    private  var count =0
-    fun getUpdatedCount():Int{
-        return ++count
+    var count = MutableLiveData<Int>()
+
+    init{
+        count.value=0
+    }
+    fun getUpdatedCount(){
+        count.value= (count.value)?.plus(1)
     }
 
-    fun getCurrentCount():Int{
+    fun getCurrentCount(): MutableLiveData<Int> {
         return count
     }
 }
